@@ -164,11 +164,19 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
+
+//**Solution using FILTER ** 2ms
 function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-  const set = new Set(list);
-  return callback(Array(...set));
+  return callback(list.filter((a,b) => list.indexOf(a) == b));
 }
+
+// **Solution using SET** 9ms
+// function processDuplicateFree(list, callback) {
+//   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+//   const de_duped = new Set(list);
+//   return callback(Array(...de_duped));
+// }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
