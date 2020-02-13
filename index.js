@@ -164,8 +164,10 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
+function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+  const set = new Set(list);
+  return callback(Array(...set));
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -291,13 +293,10 @@ function counterMakerWithLimit(max) {
   /* CODE HERE */
   var count = -1;
 
-
     return function () {
       if(count >= max)count = -1;
       count += 1; 
-      return count}
-  
-  
+      return count}  
 }
 
 /////////////// END OF CHALLENGE ///////////////
