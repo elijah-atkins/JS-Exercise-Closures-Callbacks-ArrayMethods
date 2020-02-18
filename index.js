@@ -306,7 +306,6 @@ function counterMakerWithLimit(max) {
     if(count > max)count = 0;
     return count++
   }
-
 }
 
 /////////////// END OF CHALLENGE ///////////////
